@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="How Nubi processes data, uses Chrome permissions and protects your choices.">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'">
+<meta name="robots" content="noindex">
+<title>Nubi privacy policy</title>
+<style>
+:root{color-scheme:light;--ink:#202638;--muted:#515b6b;--accent:#9b252d;--line:#dce0e7}
+*{box-sizing:border-box}body{margin:0;background:#faf9f6;color:var(--ink);font:17px/1.7 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+.wrap{max-width:860px;margin:auto;padding:0 28px}header{border-bottom:1px solid var(--line)}.header-row{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;padding:24px 0}
+a{color:var(--accent);text-underline-offset:4px;overflow-wrap:anywhere}a:hover{text-decoration-thickness:2px}a:focus-visible{outline:3px solid var(--accent);outline-offset:5px;border-radius:2px}
+.brand{font-size:22px;font-weight:800;letter-spacing:-.6px;text-decoration:none;color:var(--ink)}.brand span{color:var(--accent)}nav{display:flex;gap:20px;flex-wrap:wrap;font-size:15px}nav a{padding:6px 0}nav a[aria-current=page]{font-weight:700}
+main{padding:40px 0 64px}h1{font-size:clamp(32px,6vw,48px);line-height:1.15;letter-spacing:-1.5px;max-width:720px;margin:0 0 24px}h2{font-size:25px;line-height:1.3;margin:40px 0 14px;letter-spacing:-.5px}h3{font-size:19px;line-height:1.4;margin:26px 0 10px}p{margin:0 0 18px}li{margin:8px 0}ul,ol{padding-left:24px}.lead{font-size:20px;color:var(--muted)}.eyebrow{font-size:13px;text-transform:uppercase;letter-spacing:1.5px;font-weight:700;color:var(--accent)}
+.draft{padding:16px 20px;border:1px solid #b59a5b;background:#fff3d6;border-radius:8px;margin:0 0 32px;font-size:15px}.contact{padding:24px;background:#fff;border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:8px}.contact h2{margin-top:0}.contact p:last-child{margin-bottom:0}
+footer{border-top:1px solid var(--line);padding:24px 0 36px;color:var(--muted);font-size:14px}footer p{margin:0 0 8px}.skip{position:absolute;left:20px;top:-100px;padding:10px 16px;background:#fff;z-index:1}.skip:focus{top:10px}
+@media(max-width:480px){.wrap{padding:0 20px}.header-row{gap:10px;padding:18px 0}nav{gap:16px}main{padding-top:28px}.contact{padding:20px}}
+@media print{body{background:#fff;color:#000}.skip,nav{display:none}main{padding:20px 0}a{color:inherit}.wrap{max-width:none}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header><div class="wrap"><div class="header-row">
+<div class="brand">Nubi</div>
+
+</div></div></header>
+<div class="wrap"><main id="main" tabindex="-1">
+<h1>Nubi privacy policy</h1>
+<p>Last updated: November 17, 2026. Policy version: 1. Applies to Nubi 1.0.0 with billing disabled.</p>
+<p>Publisher: Dax Manuel</p>
+<p>Contact: <a href="mailto:mail@daxmanuel.com">mail@daxmanuel.com</a></p>
+<h2>What Nubi does</h2>
+<p>Nubi is an independent academic planner for UNB Brightspace. It is not affiliated with or endorsed by the University of New Brunswick or D2L.</p>
+<p>Before accessing coursework, Nubi asks you to connect Brightspace. It uses the session already signed in at lms.unb.ca. You sign in with UNB directly. Nubi does not ask for your password or read authentication cookie values. You can instead choose sample data, which shows made-up courses and deadlines and reads nothing from Brightspace.</p>
+<h2>Information processed</h2>
+<p>Nubi processes Brightspace responses to identify your account and accessible enrollments, then selects confirmed current-semester courses for coursework collection. It saves your account identifier, name, initials, selected course identifiers/names, dated coursework, completion status, and source links. This supports the deadline list, account separation, refreshes, and reminders. API responses may contain additional fields or older records; the planner keeps the fields needed for its features. Unconfirmed-term courses and unsupported sources may be absent.</p>
+<p>Calendar imports process the ICS file you choose, including event identifiers, titles, times, recurrence definitions, rooms, descriptions, timezone definitions, and filename. Imported attachments and alarms are not used; remote calendar files and attachments are not fetched. Personal events store the titles, dates, descriptions, locations and colors you enter.</p>
+<p>Preferences, consent version/time, reminder delivery state, and recent sync status are saved. A bounded diagnostic report retains aggregate counts, request status codes and timings; saved reports exclude course names, student IDs, response samples, request paths and free-form errors.</p>
+<h2>Storage, use, and transmission</h2>
+<p>Planner data and settings are stored in this Chrome profile on this computer using chrome.storage.local. Temporary interface and reminder-navigation state also uses chrome.storage.session, which Chrome clears when the browser session ends. The extension does not use chrome.storage.sync. Calendars are separated by Brightspace account. Background refreshes make authenticated HTTPS requests only to lms.unb.ca, normally about every 30 minutes while Chrome runs. Opening a source link opens Brightspace in Chrome. UNB/D2L handle their own service&#39;s requests under their applicable policies.</p>
+<p>This billing-disabled build does not send planner data to the publisher or a third-party backend. It has no advertising, sale of data, or usage analytics. It does not scan unrelated browsing history. Its page bridge is restricted to the UNB Brightspace origin and allowlisted read-only API routes. Local check-offs and calendar edits do not change your Brightspace coursework or submit work.</p>
+<p>Notifications are passed to Chrome and the operating system and can show course/item details on a lock screen. Delivery depends on Chrome running, a valid session, network and operating-system settings; it is not guaranteed at an exact time.</p>
+<h2>Why Chrome asks for these permissions</h2>
+<h3>Storage (storage)</h3>
+<p>Saves your coursework cache, imported calendars, personal events, preferences, consent, diagnostics and reminder state in this Chrome profile. It also holds temporary interface state for the current browser session. It does not upload these records to Chrome account sync.</p>
+<h3>Notifications (notifications)</h3>
+<p>Shows desktop reminders for coursework deadlines, changed due dates and personal events. Reminder text can include course or event details. You can adjust coursework reminders and muted courses in Settings, control personal-event reminders in Calendar, or turn off Chrome notifications in your operating system.</p>
+<h3>Alarms (alarms)</h3>
+<p>Lets Chrome wake the extension to refresh coursework and check or deliver scheduled reminders while Chrome is running, even when the side panel is closed. These are background timers, not access to your device&#39;s alarm-clock app. Sleep and browser shutdown can delay them.</p>
+<h3>Side panel (sidePanel)</h3>
+<p>Displays your deadlines, class calendar and settings beside the web page you are viewing when you open Nubi from Chrome&#39;s toolbar. This permission provides the panel; it does not give the extension access to every page you browse.</p>
+<h3>UNB Brightspace access (https://lms.unb.ca/*)</h3>
+<p>Allows the extension to read supported Brightspace information using your existing signed-in session after you choose Connect Brightspace. A small script on lms.unb.ca can relay the same permitted read-only requests through an open Brightspace tab. The extension does not ask for your UNB password, read cookie values, edit the Brightspace page, or request access to other websites in this build.</p>
+<h2>Retention and your choices</h2>
+<p>Local cached coursework is updated as refreshes succeed. The planner displays confirmed current-term courses and dated work from the current semester onward. Some recovery data can remain until a successful refresh. Imported definitions, past personal events, inactive-account calendars and settings persist until removed or all data is deleted. The most recent diagnostic report replaces its predecessor.</p>
+<p>In Settings, Delete my data removes saved coursework, imports, personal events, diagnostics and consent from this installation, resets preferences to their defaults, and stops scheduled planner processing. A new explicit connection is required to read Brightspace again. Deletion does not change Brightspace records or delete files you downloaded or messages you sent to support. Uninstalling removes this extension&#39;s local Chrome storage. There is no automatic cross-device backup or sync.</p>
+<p>Encrypted backup export is optional and initiated by you. It saves this account&#39;s imported calendars, personal events and recurrence exceptions, calendar preferences, event reminders, coursework reminder settings, muted courses and local deadline check-offs to a file encrypted with your passphrase. The passphrase is not stored and cannot be recovered. It does not export consent, authentication credentials or raw coursework responses. Restoring replaces this account&#39;s calendars, matching local check-offs and the profile&#39;s coursework reminder preferences after confirmation. Older calendar-only backups leave coursework preferences and check-offs unchanged. A local recovery journal may temporarily retain the validated restore data until an interrupted restore finishes; deleting local data clears it. Keep your downloaded files and passphrase safe, and delete them yourself when no longer needed.</p>
+<h2>Billing in this release</h2>
+<p>Billing is disabled in this release. No billing-provider requests, subscription charges, separate billing sign-in, or Google Calendar sync are active. The repository includes a separate optional subscription integration, but this policy describes the billing-disabled extension. A subscription-enabled release needs updated disclosures identifying the providers, information shared and retention practices, along with a separate billing consent choice, before activation.</p>
+<h2>Security</h2>
+<p>UNB requests use HTTPS. Stored extension data is restricted to trusted extension contexts. These controls are not a claim that local chrome.storage.local data is application-encrypted. Your browser profile and device access controls matter. The encrypted backup feature protects exported files separately; it does not encrypt the extension&#39;s working local store.</p>
+<h2>Support and sharing</h2>
+<p>Nothing is automatically sent to the developer for support. You can inspect a diagnostic report before explicitly copying it. If you choose to contact support, send only information needed for your request and remove private coursework or identifiers. Support-message retention: support emails are kept for up to 12 months after your request is resolved, then deleted.</p>
+<p>If you email support, the publisher and the email providers used to deliver the message process your email address, message and any attachments to respond to your request. Do not send passwords, session cookies or private coursework. Contact the public support address above for privacy questions or to request deletion of support correspondence, subject to the stated retention policy.</p>
+<h2>Visiting the public website</h2>
+<p>The privacy and support website contains static pages with no analytics scripts, tracking pixels, embedded third-party content, or contact form. Visiting the website does not give it access to your extension&#39;s stored coursework. Email links open your chosen mail application.</p>
+<p>When this site is hosted on GitHub Pages, GitHub logs visitors&#39; IP addresses for security purposes. This hosting activity is separate from the extension&#39;s local planner storage. See <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages#data-collection">GitHub Pages data collection</a> and the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub Privacy Statement</a>.</p>
+<h2>Limited Use and changes</h2>
+<p>Nubi&#39;s use of user data adheres to the Chrome Web Store User Data Policy, including the Limited Use requirements. Data is used only for the disclosed academic planning features and their necessary operation. It is not used for personalized advertising, data brokerage, credit assessment, or unrelated profiling.</p>
+<p>Material changes to data practices will be disclosed and, where appropriate, require renewed consent before the new processing begins. The last-updated date and policy version identify this notice.</p>
+</main>
+<footer><p>Nubi · Dax Manuel · <a href="mailto:mail@daxmanuel.com">mail@daxmanuel.com</a></p><p>An independent project. Not affiliated with or endorsed by the University of New Brunswick or D2L.</p></footer></div>
+</body>
+</html>
